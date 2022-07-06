@@ -171,3 +171,11 @@ li {
 .todo-check[type="checkbox"]:checked::before {
   transform: scale(1.7);
 }
+
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
