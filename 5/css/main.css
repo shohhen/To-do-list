@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap");
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  max-width: 1880px;
+  font-family: "Ubuntu";
+  font-weight: 400;
+  background-color: #38404b;
+  color: #94adcf;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  object-fit: cover;
+}
+
+.js-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 30%;
+  height: 50px;
+  margin: 50px auto;
+  box-shadow: inset 3px 3px 6px #2e353e, inset -3px -3px 6px #424b58;
+  border-radius: 16px;
+}
+
+.js-form input {
+  width: 70%;
+  font-size: 15px;
+}
+
+input::placeholder {
+  font-size: 15px;
+}
+
+.js-form > input,
+button,
+input::placeholder {
+  border: none;
+  outline: none;
+
+  color: #94adcf;
+}
+
+button {
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.js-form button {
+  height: 70%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+  font-size: 20px;
+  width: 100%;
+}
+
+.container button {
+  margin-right: 20px;
+  width: 150px;
+  height: 50px;
+  font-weight: 500;
+  box-shadow: 3px 3px 6px #94adcf, -3px -3px 6px #94adcf;
+}
+
+.container .active {
+}
+
+.container button:last-child {
+  margin-right: 0;
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  width: 25%;
+  border-radius: 16px;
+  box-shadow: 1.5px 1.5px 6px;
+  transition: 2s;
+}
+
+.todo-check {
+  transform: scale(1.5);
+  margin: 16px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.delete-btn {
+  margin-right: 5px;
+  padding: 0;
+  width: 70px;
+  height: 35px;
+}
+
+.delete-btn:hover {
+  color: #fff;
+  background-color: red;
+  transition: 0.3s;
+}
+
+/* CHECKBOX */
+
+.todo-check[type="checkbox"] {
+  appearance: none;
+  background-color: #38404b;
+  margin: 16px;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 16px;
+  display: grid;
+  place-content: center;
+}
+
+.todo-check[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 0.5s transform ease-in-out;
+  box-shadow: inset 3px 3px var(--form-control-color);
+  background-color: #94adcf;
+  border-radius: 16px;
+}
+
+.todo-check[type="checkbox"]:checked::before {
+  transform: scale(1.7);
+}
